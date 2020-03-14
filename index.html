@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<title>How Clean Is Your Hood?</title>
+	
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=Sanchez" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+	<!-- Leaflet CSS & JS  -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+	integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="	crossorigin=""/>
+	<link rel="stylesheet" href="https://cdn.rawgit.com/socib/Leaflet.TimeDimension/master/dist/leaflet.timedimension.control.min.css" />
+	
+	<!-- Icons -->
+	<link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="static/css/leaflet.extra-markers.min.css">
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- Our CSS  -->
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+	
+	  
+   
+  
+</head>
+<body>
+ 
+	<header class="blog-header py-3 border-bottom shadow-sm"> 
+		 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"> 
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+			  <ul class="navbar-nav mr-auto"> 
+				<li class="nav-item">
+				  <a class="btn  btn-success" href="#">Dashboard</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#theMap">Map</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#band">Team</a>
+				</li>
+				<li class="nav-item">
+				  <!-- <a class="nav-link" href="#tour">Resources</a> -->
+				</li> 
+			  </ul>
+			 <ul class="navbar-nav ">
+			  <li class="nav-item">
+				 <a class="nav-link" href="https://portal.311.nyc.gov/report-problems/">Submit Your Own Complaint</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" href="https://www.activesustainability.com/environment/top-5-most-polluting-countries/">Top 5 Polluted Countries in the World</a> 
+				</li>
+				</ul>
+			  </form>
+			</div>
+		  </nav> 
+	</header>
+	
+	<section class="space-lg  overflow-hidden breathingMap">
+		<div class="container py-4 mt-5 introBanner">
+			<h1 class='grey	 center mt-5'>How Clean Is Your Hood?</h1>
+			<a class="btn btn-lg btn-success " id="introButton" href="#theMap">Click Me</a> 
+			
+			
+		</div>
+	</section>
+	
+	
+	<section class="space-lg bg-gradient overflow-hidden" id='theMap'>
+		<div class="container py-4 mt-5">
+			<h1 class='white'>NYC 311 Sanitation Complaints  </h1>
+			<hr class="featurette-divider">
+			
+			<div id="map"  class="img-fluid py-5 rounded shadow-sm"></div>  
+				 
+			<br/>
+		 
+			<div class="bd-example">
+	  
+				<button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filter Map 
+				</button>
+					<div class="dropdown-menu">
+	  
+						<a class="dropdown-item" id="airQuality" href="#">Air Quality</a>
+						<a class="dropdown-item" id="asbestos" href="#">Asbestos</a>
+						<a class="dropdown-item" id="leadDust" href="#">Lead Dust</a>
+						<a class="dropdown-item" id="industrialWaste" href="#">Industrial Waste</a>
+						<a class="dropdown-item" id="mold" href="#">Mold</a>
+						<a class="dropdown-item" id="waterQuality" href="#">Water Quality</a>
+						
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" id="clearFilters">Clear filters</a>
+					</div>
+			</div>
+			
+			
+		</div>
+	</section>
+  
+   
+
+    <main role="main" class="container">
+		<div class="container marketing mt-5" id="band">
+			<h1>The Team </h1>
+			<hr class="featurette-divider">
+			<!-- Three columns of text below the carousel -->
+			<div class="row">
+			  <div class="col-lg-3">
+				<div class="text-center">
+					<img src="static/img/gina.jpg" class="img-fluid img-thumbnail rounded" alt="..."> 
+					<h2>Gina Nelson</h2> 
+					<p> </p>
+				</div>
+			  </div><!-- /.col-lg-4 -->
+			  <div class="col-lg-3">
+				<div class="text-center">
+					<img src="static/img/miles.jpg" class="img-fluid img-thumbnail rounded" alt="..."> 
+					<h2>Miles Holtzman</h2> 
+				</div>
+			  </div><!-- /.col-lg-4 -->
+			  <div class="col-lg-3">
+				<div class="text-center">
+					<img src="static/img/alvin.jpg" class="img-fluid img-thumbnail rounded" alt="..."> 
+					<h2>Alvin Victor</h2> 
+				</div>
+			  </div><!-- /.col-lg-4 -->
+			  <div class="col-lg-3">
+				<div class="text-center">
+					<img src="static/img/kate.jpeg" class="img-fluid img-thumbnail rounded" alt="..."> 
+					<h2>Kate Vnuk</h2> 
+				</div>
+			  </div><!-- /.col-lg-4 -->
+			</div><!-- /.row -->
+
+
+			<!-- START THE FEATURETTES -->
+			
+			
+			</div>
+ 
+
+			<hr class="featurette-divider">
+ 
+			<!-- /END THE FEATURETTES --> 
+		</div>
+
+    </main><!-- /.container -->
+
+    <footer class="blog-footer">
+ 
+      <!-- <p>Footer credits</p> -->
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous"></script>
+	
+	<!-- D3 cdn -->
+	<!-- 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha256-OUFW7hFO0/r5aEGTQOz9F/aXQOt+TwqI1Z4fbVvww04=" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script> 
+	 
+	 
+	<script type="text/javascript" src="logic.js"></script> -->
+	 
+	
+	<!-- D3 -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
+
+	<!-- MomentJS -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+
+	<!-- Leaflet JavaScript -->
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+	integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="	crossorigin=""></script>
+
+	<!-- Icons -->
+	<script src="static/js/leaflet.extra-markers.min.js"></script>
+
+	<!-- polyfill.io is library for using newer JavaScript features in older browers (such as Object.assign) -->
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+
+	<!-- API Key -->
+	<script type="text/javascript" src="static/js/config.js"></script>
+
+	<!-- Our JavaScript -->
+	<script type="text/javascript" src="static/js/logic.js"></script>
+
+
+	
+</body>
+</html>
+
