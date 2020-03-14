@@ -1,4 +1,5 @@
-# project2
+# Project2 - Group 1
+--------------------
 # Topic: 311 NYC Complaints Single page Web Application with Interactive elements (MAP/UI/)
 
 ## Data Used:
